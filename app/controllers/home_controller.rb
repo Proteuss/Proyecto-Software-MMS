@@ -5,6 +5,4 @@ class HomeController < ApplicationController
   end
   def contacto
   end
-  def yuri
-  end
 end

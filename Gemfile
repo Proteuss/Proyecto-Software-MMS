@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'rails_admin'
+gem 'nokogiri'
+gem 'mechanize'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
@@ -29,7 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+group :test do
+  gem "watir-rails"
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

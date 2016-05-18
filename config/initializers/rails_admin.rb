@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["Administracion general"]
   ### Popular gems integration
 
   ## == Devise ==
