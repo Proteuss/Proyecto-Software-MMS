@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'paperclip'
+gem 'ckeditor'
 gem 'devise'
 gem 'rails_admin'
 gem 'nokogiri'

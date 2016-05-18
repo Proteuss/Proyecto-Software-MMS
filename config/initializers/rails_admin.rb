@@ -1,6 +1,15 @@
 RailsAdmin.config do |config|
-
+  config.included_models = ["Noticia", "User"]
   config.main_app_name = ["Administracion general"]
+
+  config.model Noticia do
+    edit do
+      field :titulo
+      field :contenido, :ck_editor
+    end
+  end
+
+
   ### Popular gems integration
 
   ## == Devise ==
