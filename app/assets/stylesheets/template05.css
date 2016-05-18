@@ -90,7 +90,7 @@ border:3px solid #9a8a7a;
 
 #wrapper { 
 margin: 5px auto; 
-width: 980px;
+width: 1200px;
 border: 1px solid #9c8c7d;
 background: #fff; 
 }
@@ -206,7 +206,7 @@ margin: 0 9px 3px 0;
 
 #rightside {
 float: right;
-width: 635px;
+width: 850px;
 margin: 0 0 10px 0;
 }
 

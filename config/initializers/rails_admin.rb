@@ -8,6 +8,11 @@ RailsAdmin.config do |config|
       field :contenido, :ck_editor
     end
   end
+ config.model User do
+    edit do
+      field :rol
+    end
+  end
 
 
   ### Popular gems integration
@@ -32,14 +37,16 @@ RailsAdmin.config do |config|
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
-    new
+    new  do
+      except ['User']
+    end
     export
     bulk_delete
     show
     edit
     delete
     show_in_app
-
+    
     ## With an audit adapter, you can add:
     # history_index
     # history_show
