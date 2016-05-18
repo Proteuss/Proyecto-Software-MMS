@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="author" content="collin grasley"/>
+<meta name="description" content="A new template for open designs" />
+<meta name="keywords" content="lorem ipsum, lorem ipsum" /> 
+<link rel="stylesheet" type="text/css" href="template05.css" media="screen" />
+
+<title>Archivo de música</title>
+</head>
+<body>
+  <!-- para FB -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- end -->
+
+<div id="wrapper">
+
+<div id="header">
+  <h1>Archivo de música</h1>
+  <a href="/home/index">
+      <%= image_tag("portada.png", size: "227x195", class: "image", alt: "Portada") %>
+      
+  </a>
+  <div class="fb-follow" data-href="https://www.facebook.com/profile.php?id=100009219667562" data-layout="standard" data-show-faces="true"></div>
+</div>
+
+<!-- end header -->
+
+<div id="pic"></div>
+
+<!-- end main pic - this is a background image-->
+        
+<ul id="menu">
+  <li><a href="/home/index">Home</a></li>
+  <li><a href="/home/about">Acerca de Nosotros</a></li>
+  <li><a href="/home/contacto">Contáctanos</a></li>.
+  <li>
+    <form id="tfnewsearch" method="get" action="http://www.google.com">
+      <input type="text" class="tftextinput" name="q" size="18" maxlength="120">
+      <input type="submit" value="Buscar" class="tfbutton">
+    </form>
+  </li>
+</ul>
+
+<!-- end main menu -->
+
+<!-- all the right hand content begins here-->
+
+<div class="clear"></div> 
+
+<div id="rightside">
+
+<div class="rightdata">
+    <table> 
+  <% @noticias.each do |noticia| %>
+    <tr><p>
+      <%= link_to noticia.titulo.html_safe, "/noticias/"+noticia.id.to_s %>
+    </p>
+    </tr>
+  <% end %>
+</table>
+
+</div>
+
+<div class="rightdata">
+</div>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = https://isw-teikkenn.c9users.io/; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = index; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//proyectoisw.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+</div>
+
+<div id="leftside">
+
+<div class="leftdata">
+
+<div id="leftnav">
+<ul>
+<h2>Secciones</h2>
+<li><a href="/foro/foroPrincipal">Foro</a></li>
+<li><a href="/posts">Noticias</a></li>
+<li><a href="/articulos/A3">Contenido multimedia</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="leftdata">
+  <a class="twitter-timeline"  href="https://twitter.com/BNChile" data-widget-id="686277197691252736">Tweets por el @BNChile.</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+<div class="leftdata">
+<div class="fb-page" data-href="https://www.facebook.com/BibliotecaNacionaldeChile/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/NothinTrumpsRump"><a href="https://www.facebook.com/NothinTrumpsRump">Space Dandy Booty Hunter</a></blockquote></div></div>
+</div>
+
+</div>
+
+<div class="clear"></div> 
+
+<div id="footer">
+
+
+<p class="copyright">&copy; 2016 GrupoB-</p>
+
+<p>
+<a href="mailto:collingrasley@gmail.com">Coll23</a> &middot; 
+<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> and <a href="http://validator.w3.org/check?uri=referer">XHTML</a>
+<br /></p>
+      
+</div>
+</div>
+</body>
+</html>
+ 

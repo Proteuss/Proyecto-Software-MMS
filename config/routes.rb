@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'noticias/index'
+
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
   get 'home/about'
   get 'home/contacto'
   get 'foro/foroPrincipal'
+  get 'noticias/index'
+  get 'noticias/:id' => 'noticias#show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
