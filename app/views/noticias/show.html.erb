@@ -1,10 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<meta name="author" content="collin grasley"/>
-<meta name="description" content="A new template for open designs" />
-<meta name="keywords" content="lorem ipsum, lorem ipsum" />	
+
 <link rel="stylesheet" type="text/css" href="template05.css" media="screen" />
 
 <title>Archivo de música</title>
@@ -25,7 +22,7 @@
 
 <div id="header">
   <h1>Archivo de música</h1>
-  <a href="/home/index">
+  <a href="/noticias/index">
       <%= image_tag("portada.png", size: "227x195", class: "image", alt: "Portada") %>
       
   </a>
@@ -39,11 +36,12 @@
 <!-- end main pic - this is a background image-->
 				
 <ul id="menu">
-  <li><a href="/home/index">Home</a></li>
   <li><a href="/home/about">Acerca de Nosotros</a></li>
   <li><a href="/home/contacto">Contáctanos</a></li>
   <li><a href="/foro/foroPrincipal">Foro</a></li>
-<li><a href="/noticias/index">Noticias</a></li>.
+<li><a href="/noticias/index">Noticias</a></li>
+<li><a href="/users/sign_in">Conectarse</a></li>
+<li><a href="/users/sign_out">Desconectarse</a></li>.
   <li>
     <form id="tfnewsearch" method="get" action="http://www.google.com">
       <input type="text" class="tftextinput" name="q" size="18" maxlength="120">
@@ -61,9 +59,17 @@
 <div id="rightside">
 
 <div class="rightdata">
-    <p>
-  <%= @noticia.titulo.html_safe %>
-</p>
+  <p>
+      <table>
+        <td> <%= image_tag @noticia.portada.url(:medium) %></td>
+         <td>
+            <h2><%= @noticia.titulo %></h2><br>
+            <%= @noticia.descripcion %><br>
+            </td>
+
+      
+      </table>
+    </p>
 <p>
   <%= @noticia.contenido.html_safe %>
 </p>

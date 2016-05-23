@@ -4,8 +4,13 @@ RailsAdmin.config do |config|
 
   config.model Noticia do
     edit do
+      
       field :titulo
+      field :portada
+      field :descripcion
       field :contenido, :ck_editor
+      
+      
     end
   end
  config.model User do
@@ -14,11 +19,16 @@ RailsAdmin.config do |config|
     end
   end
 
-
+config.authorize_with do |controller|
+    unless (!current_user.nil? && (current_user.rol==1 || current_user.rol==2))
+      flash[:error] = "No tienes privilegios de administrador."
+      redirect_to "/"
+    end
+  end
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
+  #config.authenticate_with do
   #   warden.authenticate! scope: :user
   # end
   # config.current_user_method(&:current_user)
