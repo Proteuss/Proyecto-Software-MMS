@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'emailapi/index'
+
   get 'noticias/index'
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -15,6 +17,11 @@ Rails.application.routes.draw do
   get 'foro/foroPrincipal'
   get 'noticias/index'
   get 'noticias/:id' => 'noticias#show'
+  get 'emailapi' => 'emailapi#index'
+  get 'emailapi/suscribe' => 'emailapi#suscribe'
+  get 'emailapi/unsuscribe' => 'emailapi#unsuscribe'
+  post 'emailapi/index' => 'emailapi#actualizarIntereses'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

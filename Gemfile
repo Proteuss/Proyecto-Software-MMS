@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'gibbon', git: 'git://github.com/amro/gibbon.git'
 gem 'paperclip'
 gem 'ckeditor'
 gem 'devise'
