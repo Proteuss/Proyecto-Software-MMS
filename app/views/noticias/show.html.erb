@@ -3,7 +3,18 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="template05.css" media="screen" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
 
+   if(user_signed_in?){
+     alert("holi");
+   }
+      
+    
+      
+});
+</script>
 <title>Archivo de música</title>
 </head>
 <body>
@@ -23,7 +34,7 @@
 <div id="header">
   <h1>Archivo de música</h1>
   <a href="/noticias/index">
-      <%= image_tag("portada.png", size: "227x195", class: "image", alt: "Portada") %>
+      <%= image_tag("portada.png", size: "228x166", class: "image", alt: "Portada") %>
       
   </a>
   <div class="fb-follow" data-href="https://www.facebook.com/profile.php?id=100009219667562" data-layout="standard" data-show-faces="true"></div>
@@ -43,7 +54,7 @@
 <li><a href="/users/sign_in">Conectarse</a></li>
 <li><a href="/users/sign_out">Desconectarse</a></li>.
   <li>
-    <form id="tfnewsearch" method="get" action="http://www.google.com">
+    <form id="tfnewsearch" method="get" action="http://www.google.com/search">
       <input type="text" class="tftextinput" name="q" size="18" maxlength="120">
       <input type="submit" value="Buscar" class="tfbutton">
     </form>
@@ -59,6 +70,8 @@
 <div id="rightside">
 
 <div class="rightdata">
+  
+  
   <p>
       <table>
         <td> <%= image_tag @noticia.portada.url(:medium) %></td>
@@ -76,9 +89,6 @@
 <p>
       <%= link_to "Atrás", "/noticias/index" %>
     </p>
-</div>
-
-<div class="rightdata">
 </div>
 
 

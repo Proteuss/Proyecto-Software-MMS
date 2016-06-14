@@ -64,6 +64,7 @@ Actualiza tus intereses para nuestras listas de correo:
 <%= form_tag do %>
 
 <br>
+
 <% for i in 0..@sizeInterests-1 %>
 	<% @interestList[i]=@interests["interests"][i]["id"] %>
 	<%= check_box_tag("ids[]",value=@interests["interests"][i]["id"]) %>
@@ -72,8 +73,9 @@ Actualiza tus intereses para nuestras listas de correo:
 <%	end %>
 
 
-<%= submit_tag("Actualizar Intereses") %>
+<%= submit_tag("Suscribir") %>
 <% end %>
+<a href="/emailapi/unsuscribe" target="_self"> <input type="button" name="boton" value="Desuscribir" /> </a> 
 </div>
 
 <div class="rightdata">

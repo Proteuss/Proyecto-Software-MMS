@@ -4,5 +4,6 @@ class NoticiasController < ApplicationController
   end
   def show
     @noticia = Noticia.find(params[:id])
+    @current_user =  current_user
   end
 end
