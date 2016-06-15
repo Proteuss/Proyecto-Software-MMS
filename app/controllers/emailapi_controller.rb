@@ -19,17 +19,17 @@ class EmailapiController < ApplicationController
   end
   def actualizarIntereses
  	gibbon = Gibbon::Request.new
- 	gibbon.lists("c37ad8771c").members(Digest::MD5.hexdigest(current_user.email)).upsert(body: {email_address: current_user.email, status: "subscribed", merge_fields: {FNAME: current_user.nombre, LNAME: current_user.apellido}})
- 	aux=gibbon.lists("c37ad8771c").members.retrieve(params: { "email": current_user.email})
-  	usuario=aux["members"][0]
+  gibbon.lists("c37ad8771c").members(Digest::MD5.hexdigest(current_user.email)).upsert(body: {email_address: current_user.email, status: "subscribed", merge_fields: {FNAME: current_user.nombre, LNAME: current_user.apellido}})
+ 	aux=gibbon.lists("c37ad8771c").members.retrieve(params: { "email_address": Digest::MD5.hexdigest(current_user.email)})
+  	usuario=aux["members"][9]
   	idusuario=usuario["id"]
   	@intereses=usuario["interests"]
   	@ids=params["ids"]
   	@userupdate={}
   	@intereses.each { |k, v| 
   		@userupdate[k]=false
-  		if (@lds!=nil)
-    		for i in 1..@ids.count-1
+  		if (@ids!=nil)
+    		for i in 0..@ids.count-1
   
   	  		if (k==@ids[i])
   	  			@userupdate[k]=true
