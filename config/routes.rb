@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'intento1/i1'
+
   get 'emailapi/index'
 
   get 'noticias/index'

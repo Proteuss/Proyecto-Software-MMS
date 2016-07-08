@@ -9,8 +9,10 @@ $(document).ready(function(){
     if((current_user.rol==1 || current_user.rol==2)){
           alert("holi");  
       }
+      alert("bui");  
 });
 </script>
+
 <title>Archivo de música</title>
 </head>
 <body>
@@ -41,7 +43,7 @@ $(document).ready(function(){
 <div id="pic"></div>
 
 <!-- end main pic - this is a background image-->
-				
+        
 <ul id="menu">
   <li><a href="/home/about">Acerca de Nosotros</a></li>
   <li><a href="/home/contacto">Contáctanos</a></li>
@@ -49,15 +51,13 @@ $(document).ready(function(){
 <li><a href="/noticias/index">Noticias</a></li>
 <li><a href="/emailapi">Suscripción</a></li>
 <li><a href="/users/sign_in">Conectarse</a></li>
-<li><a href="/users/sign_out">Desconectarse</a></li>
-<li>.</li>
+<li><a href="/users/sign_out">Desconectarse</a></li>.
   <li>
     <form id="tfnewsearch" action="/intento1/i1" method="get">
       <input type="text" class="tftextinput" name=q size="18" maxlength="120">
       <input type="submit" value="Buscar" class="tfbutton">
     </form>
   </li>
-  <li></li>
 </ul>
 
 <!-- end main menu -->
@@ -69,9 +69,12 @@ $(document).ready(function(){
 <div id="rightside">
 
 <div class="rightdata">
-    <% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key}" %>
-<% end %>
+
+
+<% @nombres.zip(@zeldas).each do |budget, actual| %>
+  <a href=http://arpa.ucv.cl/dic/<%= actual %>><%= budget %></a></br>
+ <% end %>
+
 </div>
 
 <div class="rightdata">
@@ -124,7 +127,7 @@ s.setAttribute('data-timestamp', +new Date());
 </div>
 
 <div class="leftdata">
-<div class="fb-page" data-href="https://www.facebook.com/BibliotecaNacionaldeChile/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/NothinTrumpsRump"><a href="https://www.facebook.com/NothinTrumpsRump">Facebook</a></blockquote></div></div>
+<div class="fb-page" data-href="https://www.facebook.com/BibliotecaNacionaldeChile/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/NothinTrumpsRump"><a href="https://www.facebook.com/NothinTrumpsRump">Space Dandy Booty Hunter</a></blockquote></div></div>
 </div>
 
 </div>
@@ -140,7 +143,7 @@ s.setAttribute('data-timestamp', +new Date());
 <a href="mailto:collingrasley@gmail.com">Coll23</a> &middot; 
 <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> and <a href="http://validator.w3.org/check?uri=referer">XHTML</a>
 <br /></p>
-			
+      
 </div>
 </div>
 </body>
